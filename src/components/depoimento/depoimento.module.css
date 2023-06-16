@@ -1,0 +1,45 @@
+.depoimento{
+    background-color: var(--white-500);
+    min-width: 300px;
+    height: fit-content;
+    -webkit-box-shadow: 73px 11px 75px -68px rgba(0, 0, 0, 0.71);
+        -moz-box-shadow: 73px 11px 75px -68px rgba(0, 0, 0, 0.71);
+        box-shadow: 73px 11px 75px -68px rgba(0, 0, 0, 0.71);
+        border-radius: 10px;
+        border: 2px solid var(--blue-500);
+        padding: 15PX;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+}
+
+.depoimento span{
+    color: var(--black-300);
+    font-weight: 600;
+    font-size: 14px;
+}
+.depoimento p{
+    color: var(--black-300);
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.aaa{
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    align-items: center;
+}
+i{
+    display: none;
+}
+
+.depoimento img{
+    width: 80px;
+    height: 30px;
+}
+
