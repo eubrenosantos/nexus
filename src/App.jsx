@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./index.css";
 import { FaWhatsapp } from "react-icons/fa";
 import logo from "../imgs/logo.svg";
-import Lottie from "lottie-react-web";
 import animation from "../imgs/animation.json";
 import Forms from "./components/forms/formss";
 import Feature from "./components/features/features";
