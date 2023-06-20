@@ -62,19 +62,19 @@ function App() {
 
         <NewDepoimentos
           title="ArenaPro"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          content="Aplicativo especializado em gerenciamento para quadras de esporte de areia."
           tab="top"
           imgs="https://res.cloudinary.com/er3-marketing-company/image/upload/v1687277334/arenapro_vnoy8p.png"
         />
         <NewDepoimentos
           title="Jornal Dhoje"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          content="Software de notícias da região metropolitana de São José do Rio Preto."
           tab="bottom"
           imgs="https://res.cloudinary.com/er3-marketing-company/image/upload/v1687279347/7shots_so_ynpvid.png"
         />
         <NewDepoimentos
           title="Kamalleon"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          content="Platafomrma All-in-One para infoprodutos."
           tab="top"
           imgs="https://res.cloudinary.com/er3-marketing-company/image/upload/v1687278637/kamalleon_dmst7a.png"
         />
