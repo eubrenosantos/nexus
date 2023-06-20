@@ -13,7 +13,7 @@ const Feature = (props)=>{
 
                     <AiOutlineApple />
                     <h1>Aplicativos iOS</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                    <p>Desenvolva apps iOS inovadores e cativantes com nossa expertise em programação, design e integração de recursos.</p>
 
 
                 </div>
@@ -25,7 +25,7 @@ const Feature = (props)=>{
 
                         <AiOutlineAndroid />
                     <h1>Aplicativos Android</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                    <p>Crie apps Android poderosos e intuitivos com nossa especialização em desenvolvimento e design de interfaces.</p>
 
                         
 
@@ -40,7 +40,7 @@ const Feature = (props)=>{
 
                     <AiOutlineGlobal />
                     <h1>Aplicativos Web</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                    <p>Transforme suas ideias em realidade com aplicativos web modernos e personalizados para impulsionar seu negócio.</p>
 
 
                     </div>
@@ -54,7 +54,7 @@ const Feature = (props)=>{
 
                     <AiOutlineShop />
                     <h1>Software Empresarial</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                    <p>Potencialize sua empresa com software empresarial personalizado, eficiente e escalável.</p>
 
                         
 

@@ -1,38 +1,40 @@
+import { SenderEmail } from "../helpers/sendEmail"
 import style from "./forms.module.css"
+
 const Forms = ()=>{
     return( 
         <>
 
         <div className={style.form}>
 
-            <h1>Fale com um especialistas</h1>
+            <h1>Fale com um Especialistas</h1>
 
             <label htmlFor="">
                 Nome
-                <input type="text" />
+                <input id="nome" type="text" />
             </label>
 
             <label htmlFor="">
                 Nome da empresa
-                <input type="text" />
+                <input id="nomedaempresa" type="text" />
             </label>
 
             <label htmlFor="">
                 Seu melhor E-mail
-                <input type="email" />
+                <input id="email" type="email" />
             </label>
 
             <label htmlFor="">
                 Telefone/Whatsapp
-                <input type="text" />
+                <input id="telefone" type="text" />
             </label>
 
             <label htmlFor="">
                 Descreva brevemente seu projeto
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea id="projeto" name=""  cols="30" rows="10"></textarea>
             </label>
 
-            <button>ENVIAR</button>
+            <button onClick={SenderEmail} id="enviarform">ENVIAR</button>
 
         </div>
         

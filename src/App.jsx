@@ -2,13 +2,15 @@ import { useState, useEffect } from "react";
 import "./index.css";
 import { FaWhatsapp } from "react-icons/fa";
 import logo from "../imgs/logo.svg";
-import animation from "../imgs/animation.json";
 import Forms from "./components/forms/formss";
 import Feature from "./components/features/features";
-import Slide from "./components/slide/slide";
 import Faq from "./components/faq/faq";
+import NewDepoimentos from "./components/newFeatures/newcomponetneas";
 import Depoimento from "./components/depoimento/depoimentos";
 import { FunctionAux } from "./components/helpers/help";
+import { Focar } from "./components/helpers/sendEmail";
+
+
 
 function App() {
   return (
@@ -19,7 +21,10 @@ function App() {
             <img src={logo} alt="" />
           </div>
           <nav>
-            <button>
+            <button onClick={()=>{
+              // 
+              window.open("https://api.whatsapp.com/send?phone=5517991526754", '_blank')
+            }}>
               <FaWhatsapp />
               ENTRE EM CONTATO
             </button>
@@ -35,34 +40,44 @@ function App() {
               Bem-vindo à Nexus Development, onde transformamos ideias
               inovadoras em aplicativos de sucesso. Se você tem uma visão
               incrível para um aplicativo móvel, mas não sabe por onde começar,
-              você está no lugar certo. Nossa equipe de especialistas em
+              você está no lugar certo. Nossa equipe de Especialistas em
               desenvolvimento de aplicativos está pronta para ajudá-lo a
               transformar sua ideia em realidade.
             </p>
-            <button>Mais Informações</button>
+            <button onClick={()=>{
+              Focar("#nome")
+            }}> Mais Informações</button>
           </div>
 
           <Forms />
         </div>
       </header>
 
-      <section className="feature">
-        <h1>Nossos Serviços</h1>
-
-        <div className="listServicos">
-          <Feature index={1} />
-          <Feature index={2} />
-          <Feature index={3} />
-          <Feature index={4} />
-        </div>
-      </section>
 
       <section className="appsemdestaque">
-        <h1>
-          Esses clientes decidiram <br /> <span>CONFIAR NA NEXUS</span>
-        </h1>
+        <h2>
+          Esses clientes <br /> decidiram{" "}
+          <div className="black">CONFIAR NA</div> <h3>NEXUS</h3>
+        </h2>
 
-        <Slide />
+        <NewDepoimentos
+          title="ArenaPro"
+          content="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          tab="top"
+          imgs="https://res.cloudinary.com/er3-marketing-company/image/upload/v1687277334/arenapro_vnoy8p.png"
+        />
+        <NewDepoimentos
+          title="Jornal Dhoje"
+          content="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          tab="bottom"
+          imgs="https://res.cloudinary.com/er3-marketing-company/image/upload/v1687279347/7shots_so_ynpvid.png"
+        />
+        <NewDepoimentos
+          title="Kamalleon"
+          content="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          tab="top"
+          imgs="https://res.cloudinary.com/er3-marketing-company/image/upload/v1687278637/kamalleon_dmst7a.png"
+        />
       </section>
 
       <section className="faques">
@@ -97,14 +112,36 @@ function App() {
               index={"05"}
               content={`Com o software pronto e em uso, o próximo passo é manter ele atualizado e incrementar novos recursos conforme se der a necessidade. Esta etapa é responsável por garantir que o sistema continuará atual e satisfazendo todas as demandas que a empresa tem conforme ela cresce.`}
             />
+            <button onClick={()=>{
+
+              const secao = document.querySelector('.rowww');
+              secao.scrollIntoView();
+
+            }}>Fale com um Especialista</button>
           </div>
 
           <img
-            src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/2396/VD_DOTA2.png"
+            src="https://res.cloudinary.com/er3-marketing-company/image/upload/v1687280511/Wandel_vom_Reseller_zum_MSP__Game_Changer_im_Milliardenmarkt_nrlxf3.jpg"
             alt=""
           />
         </div>
       </section>
+
+
+      <section className="feature">
+        <h1>Nossos Serviços</h1>
+
+        <div className="listServicos">
+          <Feature index={1} />
+          <Feature index={2} />
+          <Feature index={3} />
+          <Feature index={4} />
+        </div>
+      </section>
+
+   
+
+      
 
       <section className="depoimentos">
         <h1>
@@ -119,7 +156,15 @@ function App() {
               "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fjornaldhojeinterior.cdn.bubble.io%2Ff1682426769974x376241175596089000%2Flogo.png?w=384&h=112&auto=compress&dpr=1&fit=max"
             }
             content={
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+              "Estou extremamente satisfeito com o serviço que recebi da sua software house. A equipe foi altamente profissional, competente e ágil em todas as etapas do projeto. Eles entenderam perfeitamente minhas necessidades e criaram uma solução personalizada que superou todas as minhas expectativas. O produto final foi entregue dentro do prazo e funcionou perfeitamente. Recomendo fortemente o serviço da sua empresa para qualquer pessoa que precise de desenvolvimento de software de alta qualidade."
+            }
+          /><Depoimento
+            title={"KAMALLEON"}
+            img={
+              "https://11f85bac41e97e142e04811ada5f5930.cdn.bubble.io/f1678288234541x788282298434801700/3%20%281%29%201%20%28Traced%29.svg"
+            }
+            content={
+              "Contratar a sua software house foi a melhor decisão que tomei para o meu projeto. A equipe foi extremamente profissional, comprometida e atenta aos detalhes. Eles se esforçaram para entender completamente os requisitos do projeto e apresentaram soluções inovadoras e criativas para os desafios que encontramos ao longo do caminho. A qualidade do código entregue foi excepcional e o desempenho da aplicação final superou minhas expectativas. Estou muito satisfeito com a parceria e recomendaria seu serviço a qualquer pessoa que esteja procurando por uma software house confiável e de alta qualidade."
             }
           />
           <Depoimento
@@ -128,18 +173,10 @@ function App() {
               "https://a43c6b50521f91731ab121c587c06489.cdn.bubble.io/f1683033037659x835565622524000300/1%201.svg"
             }
             content={
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+              "Fiquei impressionado com a qualidade e o profissionalismo do serviço oferecido pela sua software house. Desde o início do projeto até a conclusão, a comunicação foi clara e eficiente. A equipe de desenvolvimento mostrou grande expertise e habilidade técnica, entregando uma solução robusta e escalável. Além disso, o suporte pós-implantação tem sido excelente, com respostas rápidas e soluções efetivas para qualquer problema que surja. Estou muito satisfeito com o resultado e definitivamente voltaria a trabalhar com vocês no futuro."
             }
           />
-          <Depoimento
-            title={"KAMALLEON"}
-            img={
-              "https://11f85bac41e97e142e04811ada5f5930.cdn.bubble.io/f1678288234541x788282298434801700/3%20%281%29%201%20%28Traced%29.svg"
-            }
-            content={
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-            }
-          />
+          
           <Depoimento
             title={"CADASTRANDOWEB"}
             img={
@@ -153,41 +190,29 @@ function App() {
       </section>
 
       <footer>
-
-
         <div className="columnFooter">
-
           <span>Sobre a Empresa</span>
 
           <img src={logo} alt="" />
           <p>Somos uma SoftwareHouse focada em entregar resultado</p>
-
-
         </div>
         <div className="columnFooter">
-
           <span>Links Úteis</span>
 
           <a href="#">Home</a>
           <a href="#">Contato</a>
           <a href="#">Formulário</a>
-
-
         </div>
-        
-        <div className="columnFooter">
 
+        <div className="columnFooter">
           <span>Projetos</span>
 
           <a href="#">Kamalleon</a>
           <a href="#">ArenaPro</a>
           <a href="#">Dhoje</a>
           <a href="#">Formulário</a>
-
-
         </div>
         <div className="columnFooter">
-
           <span>Se inscreva</span>
 
           <label htmlFor="">
@@ -195,12 +220,7 @@ function App() {
             <input type="email" placeholder="Digite seu melhor email" />
             <button>ENVIAR</button>
           </label>
-
-
         </div>
-
-
-        
       </footer>
     </>
   );

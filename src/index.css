@@ -177,12 +177,16 @@ section{
 
 .feature{
 
-        background-image: url("../imgs/backgroundtwo.svg");
+       background-color: var(--white-500);
 
 }
 .appsemdestaque{
 
-        background-image: url("../imgs/backgroundthre.svg");
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+        background-color: var(--black-900);
 
 }
 .feature h1{
@@ -190,21 +194,38 @@ section{
     font-size: 50px;
     margin-top: 30px;
     text-align: center;
+    
 
 }
-.appsemdestaque h1{
+.appsemdestaque h2{
     color: var(--white-500);
-    font-size: 50px;
+    font-size: 25px;
     margin-top: 50px;
     font-weight: 400;
     text-align: center;
     line-height: 1.1;
 
 }
-.appsemdestaque h1 span{
+.black{
+    display: inline;
+    color: var(--blue-500);
+    font-size: 22px;
+    
+}
+.appsemdestaque h3{
+    color: var(--blue-500);
+    font-size: 80px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.1;
+
+}
+.appsemdestaque h2 span{
     color:#F2F2F2;
-    font-size: 50px;
+    font-size: 30px;
     margin-top: 50px;
+    color: var(--black-300);
+    font-weight: 600;
 
 }
 
@@ -289,15 +310,16 @@ section{
 }
 
 .faques{
-    background-color: var(--black-300);
+    background-image: url("../imgs/backgroundtwo.svg");
 }
 
 .faques h1{
-    color: var(--white-500);
+    color: var(--black-500);
     text-align: center;
     font-size: 45px;
     width: 100%;
     font-weight: 800;
+    margin-top: 100px;
 }
 b{
     background-color: var(--blue-500);
@@ -418,6 +440,20 @@ footer{
     display: none !important;
 }
 
+.faques button{
+    background-color: var(--black-300);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white-500);
+    cursor: pointer;
+}
+.faques button:hover{
+    background-color: var(--black-900);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white-500);
+}
+
 @media (max-width: 600px) {
 
     footer{
@@ -436,10 +472,22 @@ footer{
         color: var(--blue-500);
         text-transform: lowercase;
     }
+    .black{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        color: var(--blue-500);
+    }
     h1{
         font-size: 25px !important; 
         text-align: center;
         padding: 5px 10px;
+    }
+    h3{
+        font-size: 25px !important;
+        text-align: center;
     }
 
     .scroll{
@@ -449,6 +497,7 @@ footer{
     .faques img{
 
         display: none;
+        
 
     }
     .faques{
@@ -469,6 +518,14 @@ footer{
 
     .appsemdestaque{
         padding: 30px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .appsemdestaque h2{
+        color: var(--black-300);
+        min-width: 100%;
+        line-height: 1.7;
+        text-align: center;
     }
 
     .listServicos{
