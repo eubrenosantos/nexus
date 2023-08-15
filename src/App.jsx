@@ -177,15 +177,7 @@ function App() {
             }
           />
           
-          <Depoimento
-            title={"CADASTRANDOWEB"}
-            img={
-              "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F3f5cc18477f7eb9bdc79fcbde2911b43.cdn.bubble.io%2Ff1685476111704x592723281566275500%2Flogo-cw1.png?w=&h=&auto=compress&dpr=1&fit=max"
-            }
-            content={
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-            }
-          />
+        
         </div>
       </section>
 
